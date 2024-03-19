@@ -34,7 +34,7 @@
         </el-tooltip>
 
         <!-- 验证码 -->
-        <el-form-item prop="captchaCode">
+        <!-- <el-form-item prop="captchaCode">
           <div class="flex-y-center w-full">
             <svg-icon icon-class="captcha" class="mx-2" />
             <el-input v-model="loginData.captchaCode" auto-complete="off" size="large" class="flex-1"
@@ -43,7 +43,7 @@
             <el-image @click="getCaptcha" :src="captchaBase64"
               class="rounded-tr-md rounded-br-md cursor-pointer h-[48px]" />
           </div>
-        </el-form-item>
+        </el-form-item> -->
 
         <!-- 登录按钮 -->
         <el-button :loading="loading" type="primary" size="large" class="w-full" @click.prevent="handleLogin">{{
@@ -112,13 +112,13 @@ const loginRules = computed(() => {
         trigger: "blur",
       },
     ],
-    captchaCode: [
-      {
-        required: true,
-        trigger: "blur",
-        message: t("login.message.captchaCode.required"),
-      },
-    ],
+    // captchaCode: [
+    //   {
+    //     required: true,
+    //     trigger: "blur",
+    //     message: t("login.message.captchaCode.required"),
+    //   },
+    // ],
   };
 });
 
